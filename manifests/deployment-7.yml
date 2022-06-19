@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksyael1-7a3e"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksyael1-7a3e"
+  template:
+    metadata:
+      labels:
+        app: "aksyael1-7a3e"
+    spec:
+      containers:
+        - name: "aksyael1-7a3e"
+          image: "containerregyael.azurecr.io/aksyael1"
+          ports:
+          - containerPort: 80
